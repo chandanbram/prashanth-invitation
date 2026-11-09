@@ -105,18 +105,6 @@ export default function HeroSlide() {
         </div>
 
         {/* Invocation */}
-        <p style={{
-          fontFamily: 'EB Garamond',
-          letterSpacing: '2.5px',
-          fontSize: '12px',
-          fontWeight: '700',
-          lineHeight: '1.8',
-          color: '#fff8e9',
-          margin: '0 0 8px',
-          textShadow: '0 2px 6px rgba(0,0,0,0.85)'
-        }}>
-          || SRI MUNESHWARA SWAMY PRASANNA ||
-        </p>
 
         <p style={{
           fontFamily: 'EB Garamond',
