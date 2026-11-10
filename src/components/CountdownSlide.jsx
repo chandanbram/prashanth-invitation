@@ -68,15 +68,7 @@ export default function CountdownSlide() {
         The Countdown Begins
       </h2>
 
-      <p style={{
-        fontFamily: 'Cormorant Garamond',
-        fontSize: '19px',
-        letterSpacing: '2px',
-        color: '#e8c77e',
-        margin: '0 0 8px'
-      }}>
-        PRASHANTH & DHARSHINI
-      </p>
+      
 
       <div style={{
         width: '75px',
