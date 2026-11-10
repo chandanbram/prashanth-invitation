@@ -121,31 +121,30 @@ export default function EnvelopeIntro({ onComplete }) {
         />
 
        
+
 {/* Click instruction */}
 <motion.div
-  initial={{ opacity: 0, y: 10 }}
-  animate={{ opacity: opened ? 0 : 1, y: opened ? 10 : 0 }}
+  initial={{ opacity: 0 }}
+  animate={{ opacity: opened ? 0 : 1 }}
   transition={{ duration: 0.4 }}
   style={{
     position: 'absolute',
     bottom: '10%',
-    padding: '13px 30px',
-    background: '#641c2b',
-    border: '1px solid #d6b36a',
-    borderRadius: '3px',
-    color: '#f5dfad',
+    color: '#7B1424',
     fontFamily: 'serif',
-    fontSize: '14px',
+    fontSize: '16px',
     fontWeight: 600,
-    letterSpacing: '3px',
+    letterSpacing: '2px',
     textAlign: 'center',
-    boxShadow: '0 4px 15px rgba(0,0,0,0.35)',
+    textShadow: '0px 1px 2px rgba(255, 235, 200, 0.9)',
     zIndex: 5,
-    pointerEvents: 'none'
+    pointerEvents: 'none',
+    width: '100%'
   }}
 >
-  CLICK TO OPEN
+  TAP THE ENVELOPE TO OPEN
 </motion.div>
+
 
       </div>
     </motion.section>
