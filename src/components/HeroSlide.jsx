@@ -115,7 +115,7 @@ export default function HeroSlide() {
           margin: 0,
           textShadow: '0 2px 6px rgba(0,0,0,0.85)'
         }}>
-          TOGETHER WITH THEIR FAMILIES
+          TOGETHER WITH OUR FAMILIES
         </p>
       </div>
 
