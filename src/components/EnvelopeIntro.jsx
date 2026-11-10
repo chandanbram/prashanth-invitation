@@ -120,25 +120,33 @@ export default function EnvelopeIntro({ onComplete }) {
           }}
         />
 
-        {/* Click instruction */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: opened ? 0 : 1 }}
-          transition={{ duration: 0.4 }}
-          style={{
-            position: 'absolute',
-            bottom: '12%',
-            color: '#f8e6bd',
-            fontFamily: 'serif',
-            fontSize: '14px',
-            letterSpacing: '3px',
-            textAlign: 'center',
-            textShadow: '0 2px 8px rgba(0,0,0,0.5)',
-            zIndex: 3
-          }}
-        >
-          CLICK TO OPEN
-        </motion.div>
+       
+{/* Click instruction */}
+<motion.div
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: opened ? 0 : 1, y: opened ? 10 : 0 }}
+  transition={{ duration: 0.4 }}
+  style={{
+    position: 'absolute',
+    bottom: '10%',
+    padding: '13px 30px',
+    background: '#641c2b',
+    border: '1px solid #d6b36a',
+    borderRadius: '3px',
+    color: '#f5dfad',
+    fontFamily: 'serif',
+    fontSize: '14px',
+    fontWeight: 600,
+    letterSpacing: '3px',
+    textAlign: 'center',
+    boxShadow: '0 4px 15px rgba(0,0,0,0.35)',
+    zIndex: 5,
+    pointerEvents: 'none'
+  }}
+>
+  CLICK TO OPEN
+</motion.div>
+
       </div>
     </motion.section>
   )
