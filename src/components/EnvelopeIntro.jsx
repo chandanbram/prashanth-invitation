@@ -1,5 +1,5 @@
 
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 export default function EnvelopeIntro({ onComplete }) {
@@ -52,46 +52,81 @@ export default function EnvelopeIntro({ onComplete }) {
           alignItems: 'center'
         }}
       >
-        {/* Envelope */}
-        <motion.img
-          src="/envelope.png"
-          alt="P & D Wedding Invitation"
-          initial={{ y: 0, scale: 1 }}
-          animate={
-            opened
-              ? {
-                  y: 35,
-                  scale: 0.9,
-                  opacity: 0,
-                  rotateX: 8
-                }
-              : {
-                  y: [0, -8, 0],
-                  scale: 1
-                }
-          }
-          transition={
-            opened
-              ? {
-                  duration: 1.2,
-                  ease: 'easeInOut'
-                }
-              : {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: 'easeInOut'
-                }
-          }
+        {/* Envelope and instruction */}
+        <div
           style={{
-            display: 'block',
-            width: '90%',
-            maxWidth: '400px',
-            height: 'auto',
-            objectFit: 'contain',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            gap: '20px',
             position: 'relative',
             zIndex: 2
           }}
-        />
+        >
+          {/* Envelope */}
+          <motion.img
+            src="/envelope.png"
+            alt="P & D Wedding Invitation"
+            initial={{ y: 0, scale: 1 }}
+            animate={
+              opened
+                ? {
+                    y: 35,
+                    scale: 0.9,
+                    opacity: 0,
+                    rotateX: 8
+                  }
+                : {
+                    y: [0, -8, 0],
+                    scale: 1
+                  }
+            }
+            transition={
+              opened
+                ? {
+                    duration: 1.2,
+                    ease: 'easeInOut'
+                  }
+                : {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'easeInOut'
+                  }
+            }
+            style={{
+              display: 'block',
+              width: '90%',
+              maxWidth: '400px',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
+          />
+
+          {/* Click instruction */}
+          <motion.div
+            initial={{ opacity: 0, y: 5 }}
+            animate={{
+              opacity: opened ? 0 : 1,
+              y: opened ? 5 : 0
+            }}
+            transition={{ duration: 0.4 }}
+            style={{
+              color: '#7B1424',
+              fontFamily: 'serif',
+              fontSize: '15px',
+              fontWeight: 600,
+              letterSpacing: '2px',
+              textAlign: 'center',
+              textShadow: '0px 1px 2px rgba(255, 235, 200, 0.9)',
+              pointerEvents: 'none',
+              width: '100%'
+            }}
+          >
+            TAP THE ENVELOPE TO OPEN
+          </motion.div>
+        </div>
 
         {/* Opening glow */}
         <motion.div
@@ -119,33 +154,6 @@ export default function EnvelopeIntro({ onComplete }) {
             zIndex: 1
           }}
         />
-
-       
-
-{/* Click instruction */}
-<motion.div
-  initial={{ opacity: 0 }}
-  animate={{ opacity: opened ? 0 : 1 }}
-  transition={{ duration: 0.4 }}
-  style={{
-    position: 'absolute',
-    bottom: '10%',
-    color: '#7B1424',
-    fontFamily: 'serif',
-    fontSize: '16px',
-    fontWeight: 600,
-    letterSpacing: '2px',
-    textAlign: 'center',
-    textShadow: '0px 1px 2px rgba(255, 235, 200, 0.9)',
-    zIndex: 5,
-    pointerEvents: 'none',
-    width: '100%'
-  }}
->
-  TAP THE ENVELOPE TO OPEN
-</motion.div>
-
-
       </div>
     </motion.section>
   )
