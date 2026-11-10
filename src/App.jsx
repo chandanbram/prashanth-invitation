@@ -27,7 +27,6 @@ function App() {
           {/* Reception and Muhurtham */}
           <EventSlide
             type="combined"
-            label="THE WEDDING CELEBRATIONS"
             heading="Wedding Celebrations"
             description="Two beautiful occasions, one celebration of love. Join us as Prashanth & Dharshini begin their journey together."
             receptionDate="19 November 2026"
